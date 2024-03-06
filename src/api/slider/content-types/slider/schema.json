@@ -4,16 +4,26 @@
   "info": {
     "singularName": "slider",
     "pluralName": "sliders",
-    "displayName": "Slider",
-    "description": ""
+    "displayName": "Slider"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "sd": {
+    "name": {
       "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
     }
   }
 }

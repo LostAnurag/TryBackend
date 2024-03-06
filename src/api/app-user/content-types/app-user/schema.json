@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "app_users",
+  "info": {
+    "singularName": "app-user",
+    "pluralName": "app-users",
+    "displayName": "AppUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "uid"
+    },
+    "phonenumber": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "residentialaddress": {
+      "type": "text"
+    }
+  }
+}

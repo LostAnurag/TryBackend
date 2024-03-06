@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "portfolio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "categories": {
+      "type": "enumeration",
+      "enum": [
+        "Wedding Photography",
+        "Pre-Wedding Photoshoot",
+        "Quick Photography",
+        "Product Photoshoot",
+        "Photo Prints / Photo Framing",
+        "Photo Editing",
+        "Outdoor / Indoor / Street Portrait",
+        "Family Party / Events",
+        "Instagram Reels / Stories",
+        "Kid's  Birthday Party",
+        "Maternity Photoshoot",
+        "Newborn & Kids Photography"
+      ],
+      "required": true
+    }
+  }
+}
