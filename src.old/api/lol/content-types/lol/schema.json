@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lols",
+  "info": {
+    "singularName": "lol",
+    "pluralName": "lols",
+    "displayName": "lol"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tgy": {
+      "type": "blocks"
+    }
+  }
+}

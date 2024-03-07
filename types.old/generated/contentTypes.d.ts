@@ -788,193 +788,24 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiAppUserAppUser extends Schema.CollectionType {
-  collectionName: 'app_users';
+export interface ApiLolLol extends Schema.CollectionType {
+  collectionName: 'lols';
   info: {
-    singularName: 'app-user';
-    pluralName: 'app-users';
-    displayName: 'AppUser';
-    description: '';
+    singularName: 'lol';
+    pluralName: 'lols';
+    displayName: 'lol';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    firstname: Attribute.String;
-    lastname: Attribute.String;
-    image: Attribute.String;
-    uid: Attribute.UID;
-    phonenumber: Attribute.String;
-    email: Attribute.Email;
-    residentialaddress: Attribute.Text;
+    tgy: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::app-user.app-user',
-      'oneToOne',
-      'admin::user'
-    > &
+    createdBy: Attribute.Relation<'api::lol.lol', 'oneToOne', 'admin::user'> &
       Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::app-user.app-user',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiBookingBooking extends Schema.CollectionType {
-  collectionName: 'bookings';
-  info: {
-    singularName: 'booking';
-    pluralName: 'bookings';
-    displayName: 'booking';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    orders: Attribute.JSON;
-    uid: Attribute.String;
-    orderCompleted: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    shootCompleted: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    paymentMethod: Attribute.Enumeration<['Cash', 'Online']>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::booking.booking',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::booking.booking',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCategoryCategory extends Schema.CollectionType {
-  collectionName: 'categories';
-  info: {
-    singularName: 'category';
-    pluralName: 'categories';
-    displayName: 'Category';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
-    image: Attribute.Media & Attribute.Required;
-    uid: Attribute.UID<'api::category.category', 'name'> & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::category.category',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::category.category',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHighlightHighlight extends Schema.CollectionType {
-  collectionName: 'highlights';
-  info: {
-    singularName: 'highlight';
-    pluralName: 'highlights';
-    displayName: 'Highlight';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    description: Attribute.String & Attribute.Required;
-    backgroundimage: Attribute.Media & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::highlight.highlight',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::highlight.highlight',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiPortfolioPortfolio extends Schema.CollectionType {
-  collectionName: 'portfolios';
-  info: {
-    singularName: 'portfolio';
-    pluralName: 'portfolios';
-    displayName: 'portfolio';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    media: Attribute.Media;
-    categories: Attribute.Enumeration<
-      [
-        'Wedding Photography',
-        'Pre-Wedding Photoshoot',
-        'Quick Photography',
-        'Product Photoshoot',
-        'Photo Prints / Photo Framing',
-        'Photo Editing',
-        'Outdoor / Indoor / Street Portrait',
-        'Family Party / Events',
-        'Instagram Reels / Stories',
-        "Kid's  Birthday Party",
-        'Maternity Photoshoot',
-        'Newborn & Kids Photography'
-      ]
-    > &
-      Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::portfolio.portfolio',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::portfolio.portfolio',
-      'oneToOne',
-      'admin::user'
-    > &
+    updatedBy: Attribute.Relation<'api::lol.lol', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -990,8 +821,7 @@ export interface ApiSliderSlider extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    image: Attribute.Media & Attribute.Required;
+    Name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1028,11 +858,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::app-user.app-user': ApiAppUserAppUser;
-      'api::booking.booking': ApiBookingBooking;
-      'api::category.category': ApiCategoryCategory;
-      'api::highlight.highlight': ApiHighlightHighlight;
-      'api::portfolio.portfolio': ApiPortfolioPortfolio;
+      'api::lol.lol': ApiLolLol;
       'api::slider.slider': ApiSliderSlider;
     }
   }
