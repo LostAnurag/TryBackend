@@ -18,17 +18,6 @@ module.exports = ({ env }) => ({
         rejectUnauthorized: false,
       },
     },
-    debug: true,
-    acquireConnectionTimeout: 1000000,
-    options: {
-      pool: {
-        min: 1,
-        max: 10,
-        acquireTimeoutMillis: 900000,
-        createTimeoutMillis: 900000,
-        destroyTimeoutMillis: 900000,
-      },
-    },
+      debug: false,
   },
 });
-
